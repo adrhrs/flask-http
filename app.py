@@ -21,7 +21,12 @@ def predict():
 	g = request.args.get('gen')
 	t = request.args.get('temp')
 	print("predict")
-	return "predict API "+g+t
+	# training code
+
+	# prediction code
+	pred = 1
+
+	return pred
 
 @app.route("/tt")
 def tt():
