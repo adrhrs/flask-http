@@ -1,11 +1,13 @@
 <h1>Prediksi Thrust </h1>
 
 <label for="fname">Genshaftx</label><br />
-<input type="text" id="g" name="fname" /><br />
+<input type="text" id="g" name="fname" /><br /><br />
 <label for="lname">TEMPBEARINGMETAL</label><br />
 <input type="text" id="t" name="lname" /><br />
 <br />
 <button onclick="onClick()">Search 1</button>
+<hr>
+<h4 id="res"></h4>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
     function onClick() {
@@ -20,6 +22,7 @@
 
         $.ajax(settings).done(function (response) {
             console.log("v2",response);
+            document.getElementById("res").innerHTML = response;
         });
     }
 </script>
