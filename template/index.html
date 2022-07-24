@@ -1,4 +1,4 @@
-<h1>Prediksi Thrust</h1>
+<h1>Prediksi Thrust </h1>
 
 <label for="fname">Genshaftx</label><br />
 <input type="text" id="g" name="fname" /><br />
@@ -11,15 +11,15 @@
     function onClick() {
         var g = document.getElementById("g").value;
         var t = document.getElementById("t").value;
-        console.log("gen ",g," temp",t);
+        console.log("gen ", g, " temp", t);
         var settings = {
-  "url": "http://localhost:5000/predict?gen=123&temp=99",
-  "method": "GET",
-  "timeout": 0,
-};
+            url: "https://flask-http-adr.herokuapp.com/predict?gen=" + g + "&temp=" + t,
+            method: "GET",
+            timeout: 0,
+        };
 
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});
+        $.ajax(settings).done(function (response) {
+            console.log("v2",response);
+        });
     }
 </script>
