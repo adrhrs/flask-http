@@ -1,8 +1,10 @@
 from flask import Flask
 from flask import request, send_from_directory, render_template
 import numpy as np
+from flask_cors import CORS
 
 app = Flask(__name__,template_folder='template')
+CORS(app)
 
 @app.route("/")
 def index():
