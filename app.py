@@ -24,7 +24,7 @@ def predict():
 	# training code
 
 	# prediction code
-	pred = 1
+	pred = "1"
 
 	return pred
 
